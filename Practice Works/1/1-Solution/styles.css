@@ -1,0 +1,23 @@
+.panel {
+    background-color: lightgrey;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+}
+
+span.clear {
+    clear: left;
+    display: block;
+}
+
+.sidelink {
+    padding-top: 15px;
+    margin: 10px;
+}
