@@ -52,7 +52,7 @@ window.onload = function () {
         validate(username, span1, /^[A-Za-z0-9]+$/)
     };
     pwd.onblur = () => {
-        validate(pwd, span2, /^\d{6,}$/)
+        validate(pwd, span2, /^\S{6,}$/)
     };
     email.onblur = () => {
         validate(email, span3, /^\w+@\w+\.\w+$/)

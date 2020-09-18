@@ -1,0 +1,10 @@
+.strike {
+    text-decoration: line-through;
+}
+.trash{
+    color: red;
+    padding-right: 10px;
+}
+#add  {
+    float: right;
+}
