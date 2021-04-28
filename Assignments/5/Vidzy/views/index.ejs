@@ -1,0 +1,38 @@
+<%- include('partials/header')%>
+
+<div class="jumbotron">
+  <h1 class="display-4">My Vidzy App!</h1>
+  <p class="lead">This is a list of famous movies</p>
+  <a class="btn btn-primary btn-lg" href="/videos/new" role="button">Add a new movie</a>
+</div>
+
+<div class="container">
+  <form action="/videos" method="GET">
+    <label for="search">Enter movie title:</label>
+    <input type="text" id="search" name="search">
+    <label for="genre">Choose a genre:</label>
+    <select id="genre" name="genre">
+      <option value="All">All</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Drama">Drama</option>
+      <option value="Adventure">Adventure</option>
+    </select>
+    <button type="submit" class="btn btn-info">Search</button>
+
+</form>
+</div> 
+
+
+<div class="container">
+<div class="row">
+<% videos.forEach(function(video)
+{ %> 
+<div class="sm-col-3"> <img src="images/<%= video.image %>" style="width:200px; height:200px;" class="img-thumbnail"/> 
+<div class="caption"><a href="videos/<%=video._id %>"><%= video.title %></a></div> 
+</div>
+
+<% }); %>
+</div>
+</div>
+
+<%- include('partials/footer')%>
